@@ -1,0 +1,120 @@
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('lone.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(97, 97, 206);
+    padding: 10px;
+}
+.container h1{
+    color: #555;
+}
+.taskBox{
+    width: 100%;
+    max-width: 550px;
+    background-color: rgba(18, 204, 148, 0.74); 
+    margin: 100px auto 20px;
+    padding: 40px, 30px, 70px;
+    border-radius: 15px;
+
+}
+.taskBox h2{
+    align-items: center;
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+.row{
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    justify-content: space-between;
+    background-color: rgba(60, 192, 209, 0.568); 
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+#taskInput{
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 15px;
+    font-size: 16px;
+}
+button{
+    border: none;
+    outline: none;    
+    padding: 15px 40px;
+    background-color: rgba(60, 192, 209, 0.568); 
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(Always_smile_in_your_face-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.done{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.done::before{
+    background-image: url();
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    color: red;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+}
+ul li span:hover{
+    background-color: #555;
+}
+li{
+    border-radius: 20px;
+}
+li:hover{
+    background-color: #cfcaca5d;
+}
+
+.footer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: #2dd4daf3;
+    font-size: 13px;
+  }
+   .dev{
+    text-shadow: 0 0 10px #00ff00,  /* Green glow */
+                 0 0 20px #00ff00;  /* Larger blur for intensity */
+    color: white;                   /* Bright base color */
+  }
