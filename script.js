@@ -2,8 +2,25 @@ const inputBox = document.getElementById("taskInput");
 const taskBox = document.getElementById("listOfTasks");
 
 function addTask(){
-    if(inputBox.value === ''){
+    if(inputBox.value.trim() === ''){
     alert("You must write something!");
+    }
+    else{
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
+        taskBox.appendChild(li);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        li.appendChild(span);
+    }
+    inputBox.value = "";
+    saveData();
+
+}
+
+function addTaskNoAlert(){
+    if(inputBox.value.trim() === ''){
+    // no command to skip the alert, just return to exit the function
     }
     else{
         let li = document.createElement("li");
@@ -84,3 +101,9 @@ document.querySelectorAll('.set-reminder').forEach(button => {
   if (window.Notification) {
     Notification.requestPermission();
   }
+  // enter to add task
+inputBox.addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    addTaskNoAlert();
+  }
+});
